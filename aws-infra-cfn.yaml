@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: 2010-09-09
-Description: NLB+TargetGroup+ASG+LaunchConfig+Dovecot+EFS Demo
+Description: ASG+LaunchConfig+EC2*3 Infra
 Parameters:
   EnvironmentSize:
     Type: String
