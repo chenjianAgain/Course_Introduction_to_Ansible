@@ -131,8 +131,6 @@ Resources:
     Properties:
       KeyName: Joseph-ACG-Demo
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMALINUX] #/ Amazon Linux
-      SecurityGroups:
-        - !Ref Ec2SecurityGroup
       InstanceType: !FindInMap [InstanceSize, !Ref EnvironmentSize, EC2]
       NetworkInterfaces: 
         - AssociatePublicIpAddress: "true"
