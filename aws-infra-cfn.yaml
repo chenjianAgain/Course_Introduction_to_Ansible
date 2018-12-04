@@ -41,8 +41,10 @@ Resources:
     Properties:
       Tags: 
         - 
-          Key: "Name"
-          Value: "GD-Demo-2"
+          Key: Name
+          Value: !Sub
+            - "${StackName}-demo"
+            - StackName: !Ref AWS::StackName
       EnableDnsSupport: 'true'
       EnableDnsHostnames: 'true'
       CidrBlock: 10.0.0.0/16
