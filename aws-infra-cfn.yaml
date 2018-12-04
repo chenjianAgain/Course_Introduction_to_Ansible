@@ -105,6 +105,12 @@ Resources:
   Ec2Instance:
     Type: 'AWS::EC2::Instance'
     Properties:
+      Tags: 
+        - 
+          Key: Name
+          Value: !Sub
+            - "${StackName}-demo"
+            - StackName: !Ref AWS::StackName
       KeyName: Joseph-ACG-Demo
       ImageId: !FindInMap [RegionMap, !Ref "AWS::Region", AMALINUX] #/ Amazon Linux
       InstanceType: !FindInMap [InstanceSize, !Ref EnvironmentSize, EC2]
