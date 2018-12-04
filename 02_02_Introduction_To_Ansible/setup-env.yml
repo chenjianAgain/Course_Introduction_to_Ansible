@@ -1,7 +1,7 @@
 Parameters:
   NameOfService:
     Description: The tag name associated with this EC2 instances.
-    Default: 3
+    Default: AnsibleCourseStack
     Type: String
   KeyName:
     Description: Name of an existing EC2 KeyPair to enable SSH access into the server
